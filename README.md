@@ -1,6 +1,11 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Rub the app locally and update the below in App.js
+ headers: {
+          'Authorization': 'Bearer <JWT KEY>',
+          'Content-Type': 'application/json'
+        },
+Select a csv file and press pin. Voila!
 
 ## Available Scripts
 
