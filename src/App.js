@@ -77,7 +77,7 @@ export default function PinPage() {
               console.log(files[0]);
               Papa.parse(files[0], {
                 complete: function (results) {
-                  setCids(results.data)
+                  setCids(results.data.filter(result => result[0].length > 2))
                 }
               }
               )
@@ -88,7 +88,7 @@ export default function PinPage() {
       <br />
       <br />
       {cids &&
-        <>Hashes loaded<br />
+        <>{cids.length} Hashes loaded<br />
           <button onClick={() => handlePin()}>PinCIDS</button></>
       }
       <br />
